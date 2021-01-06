@@ -1,6 +1,0 @@
-
-
-
-@each $theme, $color in $theme-colors{
-    @include create-theme($theme,$color)
-}
