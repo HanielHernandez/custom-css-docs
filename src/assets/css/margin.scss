@@ -1,0 +1,22 @@
+
+@mixin  create-margin($margin-size) {
+    .m-#{$margin-size},.mx-#{$margin-size},.mr-#{$margin-size}{
+        margin-right: 0.25rem * $margin-size !important;
+    }
+    .m-#{$margin-size},.mx-#{$margin-size},.ml-#{$margin-size}{
+        margin-left:0.25rem * $margin-size !important;
+    }
+    .m-#{$margin-size},.my-#{$margin-size},.mt-#{$margin-size}{
+        margin-top: 0.25rem * $margin-size !important;
+    }
+    .m-#{$margin-size},.my-#{$margin-size},.mb-#{$margin-size}{
+        margin-bottom: 0.25rem * $margin-size !important;
+    }
+
+}
+
+
+@for $i from 0 through 24{
+    @include create-margin($i)
+}
+

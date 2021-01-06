@@ -1,0 +1,26 @@
+@mixin create-padding($padding-size) {
+  .p-#{$padding-size},
+  .px-#{$padding-size},
+  .pr-#{$padding-size} {
+    padding-right: 0.25rem * $padding-size !important;
+  }
+  .p-#{$padding-size},
+  .px-#{$padding-size},
+  .pl-#{$padding-size} {
+    padding-left: 0.25rem * $padding-size !important;
+  }
+  .p-#{$padding-size},
+  .py-#{$padding-size},
+  .pt-#{$padding-size} {
+    padding-top: 0.25rem * $padding-size !important;
+  }
+  .p-#{$padding-size},
+  .py-#{$padding-size},
+  .pb-#{$padding-size} {
+    padding-bottom: 0.25rem * $padding-size !important;
+  }
+}
+
+@for $i from 0 through 24 {
+  @include create-padding($i);
+}
